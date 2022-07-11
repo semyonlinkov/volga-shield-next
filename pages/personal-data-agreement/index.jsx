@@ -2,10 +2,10 @@ import React from 'react';
 import Header from '../../components/Header/Header';
 import styles from './PersonalDataAgreementPage.module.scss';
 
-const PersonalDataAgreementPage = () => {
+const PersonalDataAgreementPage = ({ activeBurger, setActiveBurger }) => {
 	return (
 		<>
-			<Header />
+			<Header activeBurger={activeBurger} setActiveBurger={setActiveBurger} />
 			<div className={styles.personal_data_wrapper}>
 				<h1>Согласие на обработку персональных данных</h1>
 				<p>
@@ -33,8 +33,9 @@ const PersonalDataAgreementPage = () => {
 				</ul>
 				<p>
 					Пользователь дает свое согласие на обработку его персональных данных, а именно совершение действий,
-					предусмотренных п. 3 ч. 1 ст. 3 Федерального закона от 27.07.2006 N 152-ФЗ &quot;О персональных данных&quot;, и
-					подтверждает, что, давая такое согласие, он действует свободно, своей волей и в своем интересе.
+					предусмотренных п. 3 ч. 1 ст. 3 Федерального закона от 27.07.2006 N 152-ФЗ &quot;О персональных
+					данных&quot;, и подтверждает, что, давая такое согласие, он действует свободно, своей волей и в своем
+					интересе.
 				</p>
 				<p>
 					Согласие Пользователя на обработку персональных данных является конкретным, информированным и
