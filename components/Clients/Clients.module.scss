@@ -1,0 +1,47 @@
+.partners_wrapper {
+	width: 100%;
+	overflow: hidden;
+
+	.title {
+		margin: 0 auto;
+		max-width: 1600px;
+		padding: 20px 30px 0px;
+	}
+
+	.carousel_wrapper {
+		display: flex;
+		flex-direction: row;
+		height: 200px;
+		animation-duration: 90s;
+		animation-name: slide;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		animation-direction: alternate;
+
+		div {
+			margin: 0 10px;
+			img {
+				height: 100%;
+				width: 250px;
+				filter: grayscale(1);
+				object-fit: contain;
+			}
+
+			img:hover {
+				filter: grayscale(0);
+			}
+		}
+	}
+
+	@keyframes slide {
+		from {
+			margin-left: 0%;
+			margin-right: 0%;
+		}
+
+		to {
+			margin-left: -100%;
+			margin-right: 100%;
+		}
+	}
+}

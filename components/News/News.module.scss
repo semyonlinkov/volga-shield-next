@@ -1,0 +1,124 @@
+.news_wrapper {
+	background-color: #191919;
+	padding-bottom: 30px;
+
+	h2 {
+		color: white;
+	}
+
+	.news_title {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0 auto;
+		max-width: 1600px;
+		padding: 20px 30px;
+	}
+
+	.news_cards_wrapper {
+		display: grid;
+		margin: 0 auto;
+		max-width: 1600px;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: 1fr;
+		grid-column-gap: 50px;
+		grid-row-gap: 30px;
+		color: white;
+		padding: 0 30px;
+
+		.news_card {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			border: 1px solid white;
+			font-size: 0.9rem;
+			color: black;
+			background-color: white;
+			overflow: hidden;
+			cursor: pointer;
+
+			&::after {
+				content: '';
+				background-image: url(../../images/BigWhiteLogo.png);
+				background-repeat: no-repeat;
+				background-size: cover;
+				position: absolute;
+				background-position: 110px 320px;
+				filter: brightness(0.1);
+				top: 0px;
+				right: 0px;
+				bottom: 0px;
+				left: 0px;
+				opacity: 0.04;
+			}
+
+			&:hover {
+				.news_card_img {
+					transform: scale(1.03);
+				}
+			}
+
+			.news_card_img {
+				width: 100%;
+				height: 250px;
+				object-fit: cover;
+				overflow: hidden;
+				transition: all ease-in-out 0.4s;
+			}
+
+			.news_card_title {
+				padding: 15px 30px 15px 30px;
+				color: black;
+				flex: 0;
+				z-index: 10;
+			}
+
+			.news_card_text_content {
+				padding: 0 30px 20px 30px;
+				flex: 1;
+				z-index: 10;
+			}
+
+			.news_card_date {
+				border-top: 1px solid #c7c7c7;
+				margin: 0 10px 5px 10px;
+				padding-top: 5px;
+				z-index: 10;
+				padding-left: 20px;
+				font-weight: 500;
+			}
+		}
+	}
+
+	@media screen and (max-width: 992px) {
+		.news_cards_wrapper {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: 1fr;
+			grid-column-gap: 50px;
+			grid-row-gap: 30px;
+			color: white;
+			padding: 0 30px;
+		}
+	}
+
+	@media screen and (max-width: 992px) {
+		.news_cards_wrapper {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: 1fr;
+			grid-column-gap: 30px;
+			grid-row-gap: 30px;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		.news_cards_wrapper {
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr;
+			grid-column-gap: 30px;
+			grid-row-gap: 30px;
+		}
+	}
+}

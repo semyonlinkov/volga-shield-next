@@ -1,0 +1,131 @@
+.services_wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	height: 100vh;
+	overflow: hidden;
+
+	@media screen and (max-width: 992px) {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		grid-column-gap: 0px;
+		grid-row-gap: 0px;
+	}
+
+	h2 {
+		color: white;
+		text-align: center;
+	}
+
+	.card_objectGuard {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)), url(../../images/objectGuard.jpg);
+		background-repeat: no-repeat;
+		background-size: auto 100%;
+		background-position: center;
+		transition: outline-offset ease-in-out 0.4s, outline-offset ease-in-out 0.4s, background-size ease-in-out 0.8s;
+
+		&:hover {
+			outline: 3px solid white;
+			outline-offset: -15px;
+			background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(../../images/objectGuard.jpg);
+			background-size: auto 102%;
+		}
+	}
+
+	.card_personalGuard {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)), url(../../images/personalGuard.jpg);
+		background-repeat: no-repeat;
+		background-size: auto 100%;
+		background-position: center;
+		transition: outline-offset ease-in-out 0.4s, outline-offset ease-in-out 0.4s, background-size ease-in-out 0.8s;
+
+		&:hover {
+			outline: 3px solid white;
+			outline-offset: -15px;
+			background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(../../images/personalGuard.jpg);
+			background-size: auto 102%;
+		}
+	}
+
+	.card_eventGuard {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)), url(../../images/eventGuard.jpg);
+		background-repeat: no-repeat;
+		background-size: auto 100%;
+		background-position: center;
+		transition: outline-offset ease-in-out 0.4s, outline-offset ease-in-out 0.4s, background-size ease-in-out 0.8s;
+
+		&:hover {
+			outline: 3px solid white;
+			outline-offset: -15px;
+			background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(../../images/eventGuard.jpg);
+			background-size: auto 102%;
+		}
+	}
+
+	.card_pco {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)), url(../../images/pco.jpg);
+		background-repeat: no-repeat;
+		background-size: auto 100%;
+		background-position: center;
+		transition: outline-offset ease-in-out 0.4s, outline-offset ease-in-out 0.4s, background-size ease-in-out 0.8s;
+
+		&:hover {
+			outline: 3px solid white;
+			outline-offset: -15px;
+			background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(../../images/pco.jpg);
+			background-size: auto 102%;
+		}
+	}
+
+	.card_autoGuard {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)), url(../../images/autoGuard.jpg);
+		background-repeat: no-repeat;
+		background-size: auto 100%;
+		background-position: center;
+		transition: outline-offset ease-in-out 0.4s, outline-offset ease-in-out 0.4s, background-size ease-in-out 0.8s;
+
+		&:hover {
+			outline: 3px solid white;
+			outline-offset: -15px;
+			background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(../../images/autoGuard.jpg);
+			background-size: auto 102%;
+		}
+	}
+
+	.card_controlPanel {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)), url(../../images/controlPanel.jpg);
+		background-repeat: no-repeat;
+		background-size: auto 100%;
+		background-position: center;
+		transition: outline-offset ease-in-out 0.4s, outline-offset ease-in-out 0.4s, background-size ease-in-out 0.8s;
+
+		&:hover {
+			outline: 3px solid white;
+			outline-offset: -15px;
+			background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(../../images/controlPanel.jpg);
+			background-size: auto 102%;
+		}
+	}
+}

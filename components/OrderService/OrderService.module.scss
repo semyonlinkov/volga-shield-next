@@ -1,0 +1,64 @@
+.orderService_wrapper {
+	max-width: 1600px;
+	margin: 0 auto;
+	padding: 0 30px 30px 30px;
+
+	.title {
+		padding: 30px 0;
+	}
+
+	.form {
+		display: flex;
+		justify-content: space-between;
+		flex: 1 500px;
+		margin-bottom: 20px;
+		gap: 20px;
+
+		.form_item1 {
+			width: 100%;
+
+			& input::-webkit-input-placeholder {
+				background: -webkit-linear-gradient(left, #aaa 0% 110px, red 0px 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+		}
+
+		.form_item2 {
+			width: 100%;
+
+			& input::-webkit-input-placeholder {
+				background: -webkit-linear-gradient(left, #aaa 0% 70px, red 0px 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+		}
+
+		.form_item3 {
+			width: 100%;
+
+			& input::-webkit-input-placeholder {
+				background: -webkit-linear-gradient(left, #aaa 0% 50px, red 0px 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+		}
+	}
+
+	@media screen and (max-width: 992px) {
+		.form {
+			flex-direction: column;
+		}
+	}
+
+	.select_order {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	textarea::-webkit-input-placeholder {
+		background: -webkit-linear-gradient(left, #aaa 0% 135px, red 0px 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+}
