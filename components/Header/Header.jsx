@@ -19,7 +19,7 @@ const Header = ({ setActiveBurger, style = {} }) => {
 				className={styles.burger}
 				onClick={() => {
 					console.log('11');
-					
+
 					setActiveBurger((prev) => !prev);
 				}}>
 				<Image src={IMGBurger} alt="burger_menu" />
@@ -48,7 +48,10 @@ const Header = ({ setActiveBurger, style = {} }) => {
 					}
 					trigger={['click', 'hover']}>
 					<li className={styles.link}>
-						О КОМПАНИИ <Image className={styles.chevron} src={IMGChevron} alt="chevron" />
+						<p>О КОМПАНИИ</p>
+						<div className={styles.chevron}>
+							<Image src={IMGChevron} width={16} height={16} alt="chevron" />
+						</div>
 					</li>
 				</Dropdown>
 				<Dropdown
@@ -85,7 +88,10 @@ const Header = ({ setActiveBurger, style = {} }) => {
 					}
 					trigger={['click', 'hover']}>
 					<li className={styles.link}>
-						УСЛУГИ <Image className={styles.chevron} src={IMGChevron} alt="chevron" />
+						<p>УСЛУГИ</p>
+						<div className={styles.chevron}>
+							<Image src={IMGChevron} width={16} height={16} alt="chevron" />
+						</div>
 					</li>
 				</Dropdown>
 				<Dropdown
@@ -112,7 +118,10 @@ const Header = ({ setActiveBurger, style = {} }) => {
 					}
 					trigger={['click', 'hover']}>
 					<li className={styles.link}>
-						КЛИЕНТАМ <Image className={styles.chevron} src={IMGChevron} alt="chevron" />
+						<p>КЛИЕНТАМ</p>
+						<div className={styles.chevron}>
+							<Image src={IMGChevron} width={16} height={16} alt="chevron" />
+						</div>
 					</li>
 				</Dropdown>
 				<Dropdown
@@ -133,7 +142,10 @@ const Header = ({ setActiveBurger, style = {} }) => {
 					}
 					trigger={['click', 'hover']}>
 					<li className={styles.link}>
-						МЕДИА <Image className={styles.chevron} src={IMGChevron} alt="chevron" />
+						<p>МЕДИА</p>
+						<div className={styles.chevron}>
+							<Image src={IMGChevron} width={16} height={16} alt="chevron" />
+						</div>
 					</li>
 				</Dropdown>
 				<Dropdown
@@ -154,7 +166,10 @@ const Header = ({ setActiveBurger, style = {} }) => {
 					}
 					trigger={['click', 'hover']}>
 					<li className={styles.link}>
-						КОНТАКТЫ <Image className={styles.chevron} src={IMGChevron} alt="chevron" />
+						<p>КОНТАКТЫ</p>
+						<div className={styles.chevron}>
+							<Image src={IMGChevron} width={16} height={16} alt="chevron" />
+						</div>
 					</li>
 				</Dropdown>
 			</ul>

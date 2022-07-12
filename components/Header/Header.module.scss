@@ -13,11 +13,16 @@
 		cursor: pointer;
 	}
 
-	.chevron {
-		transform: rotate(180deg);
-		margin-bottom: 4px;
-		width: 16px;
-		height: 16px;
+	.link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.chevron {
+			transform: rotate(180deg);
+			margin-left: 5px;
+			margin-bottom: 5px;
+		}
 	}
 
 	.burger {

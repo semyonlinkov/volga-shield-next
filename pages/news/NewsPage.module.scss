@@ -1,30 +1,38 @@
-.news_wrapper {
-	background-color: #191919;
-	padding-bottom: 30px;
+.news_page_wrapper {
+	padding-top: 91px;
+	font-size: 0.9rem;
 
-	h2 {
-		color: white;
-	}
-
-	.news_title {
+	.news_action_panel {
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
-		margin: 0 auto;
 		max-width: 1600px;
-		padding: 20px 30px;
+		gap: 30px;
+		margin: 0 auto;
+		padding: 30px 40px;
+
+		h1 {
+			flex: 1;
+		}
 	}
 
 	.news_cards_wrapper {
+		// display: flex;
+		// justify-content: center;
+		width: auto;
+		background-color: #191919;
+	}
+
+	.news_cards_container {
 		display: grid;
-		margin: 0 auto;
-		max-width: 1600px;
 		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: 1fr;
-		grid-column-gap: 50px;
+		grid-template-rows: repeat(2, 1fr);
+		grid-column-gap: 40px;
 		grid-row-gap: 30px;
 		color: white;
-		padding: 0 30px;
+		padding: 30px 40px;
+
+		max-width: 1600px;
+		margin: 0 auto;
 
 		.news_card {
 			position: relative;
@@ -93,35 +101,49 @@
 		}
 	}
 
-	@media screen and (max-width: 992px) {
-		.news_cards_wrapper {
+	.pagination {
+		display: flex;
+		justify-content: center;
+		padding: 30px;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.news_page_wrapper {
+		padding-top: 65px;
+
+		.news_action_panel {
+			padding: 15px 20px;
+		}
+
+		.news_cards_container {
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
-			grid-template-rows: 1fr;
-			grid-column-gap: 50px;
-			grid-row-gap: 30px;
-			color: white;
-			padding: 0 30px;
+			grid-template-rows: repeat(3, 1fr);
+			margin: 0 auto;
+			padding: 15px 20px;
+			grid-column-gap: 20px;
+			grid-row-gap: 20px;
 		}
 	}
+}
 
-	@media screen and (max-width: 992px) {
-		.news_cards_wrapper {
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			grid-template-rows: 1fr;
-			grid-column-gap: 30px;
-			grid-row-gap: 30px;
+@media screen and (max-width: 768px) {
+	.news_page_wrapper {
+		padding-top: 65px;
+
+		.news_action_panel {
+			padding: 15px 20px;
 		}
-	}
 
-	@media screen and (max-width: 768px) {
-		.news_cards_wrapper {
+		.news_cards_container {
 			display: grid;
 			grid-template-columns: 1fr;
-			grid-template-rows: 1fr;
-			grid-column-gap: 30px;
-			grid-row-gap: 30px;
+			grid-template-rows: repeat(6, 1fr);
+			margin: 0 auto;
+			padding: 15px 20px;
+			grid-column-gap: 20px;
+			grid-row-gap: 20px;
 		}
 	}
 }

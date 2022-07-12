@@ -15,8 +15,10 @@ const News = () => {
 			</div>
 			<div className={styles.news_cards_wrapper}>
 				<div className={styles.news_card}>
-					<div className={styles.news_card_img}>
-						<Image src={IMGNews1} alt="news-1" />
+					<div className={styles.news_card_img_wrapper}>
+						<div className={styles.news_card_img}>
+							<Image layout="fill" src={IMGNews1} objectFit="cover" alt="news-1" />
+						</div>
 					</div>
 					<h2 className={styles.news_card_title}>«Волга-Щит»: всегда на страже безопасности</h2>
 					<p className={styles.news_card_text_content}>
@@ -26,8 +28,10 @@ const News = () => {
 					<p className={styles.news_card_date}>Публикация от 12.05.2022г.</p>
 				</div>
 				<div className={styles.news_card}>
-					<div className={styles.news_card_img}>
-						<Image src={IMGNews2} alt="news-1" />
+					<div className={styles.news_card_img_wrapper}>
+						<div className={styles.news_card_img}>
+							<Image layout="fill" src={IMGNews2} objectFit="cover" alt="news-1" />
+						</div>
 					</div>
 					<h2 className={styles.news_card_title}>«Волга-Щит»: задержали нарушителя на месте преступления</h2>
 					<p className={styles.news_card_text_content}>
@@ -40,8 +44,10 @@ const News = () => {
 					<p className={styles.news_card_date}>Публикация от 12.05.2022г.</p>
 				</div>
 				<div className={styles.news_card}>
-					<div className={styles.news_card_img}>
-						<Image src={IMGNews3} alt="news-1" />
+					<div className={styles.news_card_img_wrapper}>
+						<div className={styles.news_card_img}>
+							<Image layout="fill" src={IMGNews3} objectFit="cover" alt="news-1" />
+						</div>
 					</div>
 					<h2 className={styles.news_card_title}>Волга-Щит – мы ближе, чем вы думаете</h2>
 					<p className={styles.news_card_text_content}>

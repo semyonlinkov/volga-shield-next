@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import 'antd/dist/antd.css';
+import '../styles/antd-theme/antd-customized.css';
 import '../styles/globals.scss'
 import { useState } from 'react';
 import BurgerMenu from '../components/BurgerMenu/BurgerMenu';
@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }) {
 
 	return (<>
 		<Head>
-			{/* <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet" /> */}
+			<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet" />
 		</Head>
 		<BurgerMenu activeBurger={activeBurger} setActiveBurger={setActiveBurger} />
 		<Component {...pageProps} activeBurger={activeBurger} setActiveBurger={setActiveBurger} />

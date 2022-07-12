@@ -12,7 +12,9 @@ const Hero = () => {
 	return (
 		<section className={styles.hero_wrapper}>
 			<div className={styles.hero_info}>
-				<Image src={BigWhiteLogo} className={styles.logo_img} alt="logo" />
+				<div className={styles.logo_img}>
+					<Image src={BigWhiteLogo} alt="logo" />
+				</div>
 				<div className={styles.info}>
 					<h1>20 лет на защите ваших интересов</h1>
 					<br />
@@ -32,9 +34,15 @@ const Hero = () => {
 					</p>
 				</div>
 				<div className={styles.socials}>
-					<Image src={IMGFb} alt="facebook" />
-					<Image src={IMGWhatsup} alt="whatsup" />
-					<Image src={IMGVk} alt="vk" />
+					<div className={styles.social_img}>
+						<Image src={IMGFb} alt="facebook" />
+					</div>
+					<div className={styles.social_img}>
+						<Image src={IMGWhatsup} alt="whatsup" />
+					</div>
+					<div className={styles.social_img}>
+						<Image src={IMGVk} alt="vk" />
+					</div>
 				</div>
 			</div>
 		</section>

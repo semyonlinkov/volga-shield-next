@@ -1,4 +1,4 @@
-.partners_wrapper {
+.clients_wrapper {
 	width: 100%;
 	overflow: hidden;
 
@@ -11,20 +11,16 @@
 	.carousel_wrapper {
 		display: flex;
 		flex-direction: row;
-		height: 200px;
-		animation-duration: 90s;
+		animation-duration: 60s;
 		animation-name: slide;
 		animation-iteration-count: infinite;
 		animation-timing-function: linear;
 		animation-direction: alternate;
 
-		div {
-			margin: 0 10px;
+		.img_wrapper {
+			position: relative;
 			img {
-				height: 100%;
-				width: 250px;
 				filter: grayscale(1);
-				object-fit: contain;
 			}
 
 			img:hover {
