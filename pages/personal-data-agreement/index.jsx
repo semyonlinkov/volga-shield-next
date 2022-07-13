@@ -2,10 +2,10 @@ import React from 'react';
 import Header from '../../components/Header/Header';
 import styles from './PersonalDataAgreementPage.module.scss';
 
-const PersonalDataAgreementPage = ({ activeBurger, setActiveBurger }) => {
+const PersonalDataAgreementPage = () => {
 	return (
 		<>
-			<Header activeBurger={activeBurger} setActiveBurger={setActiveBurger} style={{ backgroundColor: '#191919' }} />
+			<Header style={{ backgroundColor: '#191919' }} />
 			<div className={styles.personal_data_wrapper}>
 				<h1>Согласие на обработку персональных данных</h1>
 				<p>

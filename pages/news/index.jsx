@@ -1,41 +1,27 @@
-import { Input, Select, Pagination } from 'antd';
-import React, { useEffect, useState } from 'react';
+import { Input, Pagination } from 'antd';
 import styles from './NewsPage.module.scss';
 import IMGNews1 from '../../images/news1.jpg';
 import Image from 'next/image';
 import Header from '../../components/Header/Header';
+import { useStore } from 'effector-react';
+import { $news } from '../../state/getNews';
 
 const { Search } = Input;
-const { Option } = Select;
 
-const NewsPage = ({ activeBurger, setActiveBurger }) => {
-	const [news, setNews] = useState([]);
-
-	useEffect(() => {
-		fetch('https://volga24bot.com/ok/volgashield/getNews.php')
-			.then((res) => res.json())
-			.then((data) => setNews(data));
-	}, []);
+const NewsPage = () => {
+	const news = useStore($news);
 
 	const onSearch = (value) => console.log(value);
-
-	const handleChange = (value) => {
-		console.log(`selected ${value}`);
-	};
 
 	console.log(news);
 
 	return (
 		<>
-			<Header activeBurger={activeBurger} setActiveBurger={setActiveBurger} style={{ backgroundColor: '#191919' }} />
+			<Header style={{ backgroundColor: '#191919' }} />
 			<section className={styles.news_page_wrapper}>
 				<div className={styles.news_action_panel}>
 					<h1>Новости</h1>
-					<Select defaultValue="Упорядочить" onChange={handleChange} style={{ width: '100px' }}>
-						<Option value="new">Сначала новые</Option>
-						<Option value="old">Сначала старые</Option>
-					</Select>
-					<Search placeholder="Поиск по новостям" allowClear onSearch={onSearch} style={{ width: '200px' }} />
+					<Search placeholder="Поиск по новостям" allowClear onSearch={onSearch} style={{ width: '250px' }} />
 				</div>
 				<div className={styles.news_cards_wrapper}>
 					<div className={styles.news_cards_container}>

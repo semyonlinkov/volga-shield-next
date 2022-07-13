@@ -6,8 +6,9 @@ import IMGBurger from '../../images/burger60.png';
 import { useRouter } from 'next/dist/client/router';
 import Link from 'next/link';
 import Image from 'next/image';
+import { setIsBurgerActive } from '../../state/burgerState';
 
-const Header = ({ setActiveBurger, style = {} }) => {
+const Header = ({ style = {} }) => {
 	const router = useRouter();
 
 	return (
@@ -20,7 +21,7 @@ const Header = ({ setActiveBurger, style = {} }) => {
 				onClick={() => {
 					console.log('11');
 
-					setActiveBurger((prev) => !prev);
+					setIsBurgerActive((prev) => !prev);
 				}}>
 				<Image src={IMGBurger} alt="burger_menu" />
 			</div>

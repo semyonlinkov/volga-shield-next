@@ -1,14 +1,18 @@
 import Link from 'next/link';
 import { useState } from 'react';
+import { $isBurgerActive, setIsBurgerActive } from '../../state/burgerState';
+import { useStore } from 'effector-react';
+
 import styles from './BurgerMenu.module.scss';
 
-const BurgerMenu = ({ activeBurger, setActiveBurger }) => {
+const BurgerMenu = () => {
+	const isBurgerActive = useStore($isBurgerActive);
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
 		<section
-			className={activeBurger ? `${styles.menu} ${styles.active}` : styles.menu}
-			onClick={() => setActiveBurger(false)}>
+			className={isBurgerActive ? `${styles.menu} ${styles.active}` : styles.menu}
+			onClick={() => setIsBurgerActive(false)}>
 			<div
 				className={styles.menu__content}
 				// onClick={(e) => e.stopPropagation()}
