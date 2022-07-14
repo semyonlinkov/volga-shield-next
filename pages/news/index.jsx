@@ -1,6 +1,6 @@
 import { Input, Pagination } from 'antd';
 import styles from './NewsPage.module.scss';
-import IMGNews1 from '../../public/images/news1.jpg';
+// import IMGNews1 from '../../public/images/news1.jpg';
 import Image from 'next/image';
 import Header from '../../components/Header/Header';
 import { useRouter } from 'next/router';
@@ -43,7 +43,7 @@ const NewsPage = ({ news }) => {
 
 	const onSearch = (value) => console.log(value);
 
-	// console.log(news);
+	console.log(news);
 
 	return (
 		<>
@@ -59,7 +59,7 @@ const NewsPage = ({ news }) => {
 							<div className={styles.news_card} key={slug} onClick={() => router.push(`/news/${slug}`)}>
 								<div className={styles.news_card_img_wrapper}>
 									<div className={styles.news_card_img}>
-										<Image layout="fill" src={frontmatter.cover_image} objectFit="cover" alt="news-1" />
+										<Image src={frontmatter.cover_image} layout="fill" objectFit="cover" alt="news-1" />
 									</div>
 								</div>
 								<h2 className={styles.news_card_title}>{frontmatter.title}</h2>
