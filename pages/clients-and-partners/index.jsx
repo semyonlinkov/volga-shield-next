@@ -6,7 +6,9 @@ const ClientsAndPartners = () => {
 	return (
 		<>
 			<Header style={{ backgroundColor: '#191919' }} />
-			<div className={styles.clients_wrapper}>ClientsAndPartners</div>
+			<div className={styles.clients_wrapper}>
+				<h1>Раздел в разработке</h1>
+			</div>
 		</>
 	);
 };

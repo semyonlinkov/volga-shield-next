@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './Header.module.scss';
 import { Dropdown, Menu } from 'antd';
-import IMGChevron from '../../images/chevron20.png';
-import IMGBurger from '../../images/burger60.png';
+import IMGChevron from '../../public/images/chevron20.png';
+import IMGBurger from '../../public/images/burger60.png';
 import { useRouter } from 'next/dist/client/router';
 import Link from 'next/link';
 import Image from 'next/image';

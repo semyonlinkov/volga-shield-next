@@ -1,19 +1,49 @@
 import { Input, Pagination } from 'antd';
 import styles from './NewsPage.module.scss';
-import IMGNews1 from '../../images/news1.jpg';
+import IMGNews1 from '../../public/images/news1.jpg';
 import Image from 'next/image';
 import Header from '../../components/Header/Header';
-import { useStore } from 'effector-react';
-import { $news } from '../../state/getNews';
+import { useRouter } from 'next/router';
+
+import path from 'path';
+import fs from 'fs';
+import matter from 'gray-matter';
 
 const { Search } = Input;
 
-const NewsPage = () => {
-	const news = useStore($news);
+export async function getStaticProps() {
+	// Get files from the posts dir
+	const files = fs.readdirSync(path.join('news'));
+
+	// Get slug and frontmatter from posts
+	const news = files.map((filename) => {
+		// Create slug
+		const slug = filename.replace('.md', '');
+
+		// Get frontmatter
+		const markdownWithMeta = fs.readFileSync(path.join('news', filename), 'utf-8');
+
+		const { data: frontmatter } = matter(markdownWithMeta);
+
+		return {
+			slug,
+			frontmatter,
+		};
+	});
+
+	return {
+		props: {
+			news,
+		},
+	};
+}
+
+const NewsPage = ({ news }) => {
+	const router = useRouter();
 
 	const onSearch = (value) => console.log(value);
 
-	console.log(news);
+	// console.log(news);
 
 	return (
 		<>
@@ -25,90 +55,23 @@ const NewsPage = () => {
 				</div>
 				<div className={styles.news_cards_wrapper}>
 					<div className={styles.news_cards_container}>
-						<div className={styles.news_card}>
-							<div className={styles.news_card_img_wrapper}>
-								<div className={styles.news_card_img}>
-									<Image layout="fill" src={IMGNews1} objectFit="cover" alt="news-1" />
+						{news.map(({ slug, frontmatter }) => (
+							<div className={styles.news_card} key={slug} onClick={() => router.push(`/news/${slug}`)}>
+								<div className={styles.news_card_img_wrapper}>
+									<div className={styles.news_card_img}>
+										<Image layout="fill" src={frontmatter.cover_image} objectFit="cover" alt="news-1" />
+									</div>
 								</div>
+								<h2 className={styles.news_card_title}>{frontmatter.title}</h2>
+								<p className={styles.news_card_text_content}>{frontmatter.excerpt}</p>
+								<p className={styles.news_card_date}>Публикация от {frontmatter.date}</p>
 							</div>
-							<h2 className={styles.news_card_title}>«Волга-Щит»: всегда на страже безопасности</h2>
-							<p className={styles.news_card_text_content}>
-								На пульт «Волга-Щит» поступило сообщение о срабатывании сигнализации с охраняемого объекта
-								(частный дом). Незамедлительно на место выехала Группа быстрого реагирования
-							</p>
-							<p className={styles.news_card_date}>Публикация от 12.05.2022г.</p>
-						</div>
-						<div className={styles.news_card}>
-							<div className={styles.news_card_img_wrapper}>
-								<div className={styles.news_card_img}>
-									<Image layout="fill" src={IMGNews1} objectFit="cover" alt="news-1" />
-								</div>
-							</div>
-							<h2 className={styles.news_card_title}>«Волга-Щит»: всегда на страже безопасности</h2>
-							<p className={styles.news_card_text_content}>
-								На пульт «Волга-Щит» поступило сообщение о срабатывании сигнализации с охраняемого объекта
-								(частный дом). Незамедлительно на место выехала Группа быстрого реагирования
-							</p>
-							<p className={styles.news_card_date}>Публикация от 12.05.2022г.</p>
-						</div>
-						<div className={styles.news_card}>
-							<div className={styles.news_card_img_wrapper}>
-								<div className={styles.news_card_img}>
-									<Image layout="fill" src={IMGNews1} objectFit="cover" alt="news-1" />
-								</div>
-							</div>
-							<h2 className={styles.news_card_title}>«Волга-Щит»: всегда на страже безопасности</h2>
-							<p className={styles.news_card_text_content}>
-								На пульт «Волга-Щит» поступило сообщение о срабатывании сигнализации с охраняемого объекта
-								(частный дом). Незамедлительно на место выехала Группа быстрого реагирования
-							</p>
-							<p className={styles.news_card_date}>Публикация от 12.05.2022г.</p>
-						</div>
-						<div className={styles.news_card}>
-							<div className={styles.news_card_img_wrapper}>
-								<div className={styles.news_card_img}>
-									<Image layout="fill" src={IMGNews1} objectFit="cover" alt="news-1" />
-								</div>
-							</div>
-							<h2 className={styles.news_card_title}>«Волга-Щит»: всегда на страже безопасности</h2>
-							<p className={styles.news_card_text_content}>
-								На пульт «Волга-Щит» поступило сообщение о срабатывании сигнализации с охраняемого объекта
-								(частный дом). Незамедлительно на место выехала Группа быстрого реагирования
-							</p>
-							<p className={styles.news_card_date}>Публикация от 12.05.2022г.</p>
-						</div>
-						<div className={styles.news_card}>
-							<div className={styles.news_card_img_wrapper}>
-								<div className={styles.news_card_img}>
-									<Image layout="fill" src={IMGNews1} objectFit="cover" alt="news-1" />
-								</div>
-							</div>
-							<h2 className={styles.news_card_title}>«Волга-Щит»: всегда на страже безопасности</h2>
-							<p className={styles.news_card_text_content}>
-								На пульт «Волга-Щит» поступило сообщение о срабатывании сигнализации с охраняемого объекта
-								(частный дом). Незамедлительно на место выехала Группа быстрого реагирования
-							</p>
-							<p className={styles.news_card_date}>Публикация от 12.05.2022г.</p>
-						</div>
-						<div className={styles.news_card}>
-							<div className={styles.news_card_img_wrapper}>
-								<div className={styles.news_card_img}>
-									<Image layout="fill" src={IMGNews1} objectFit="cover" alt="news-1" />
-								</div>
-							</div>
-							<h2 className={styles.news_card_title}>«Волга-Щит»: всегда на страже безопасности</h2>
-							<p className={styles.news_card_text_content}>
-								На пульт «Волга-Щит» поступило сообщение о срабатывании сигнализации с охраняемого объекта
-								(частный дом). Незамедлительно на место выехала Группа быстрого реагирования
-							</p>
-							<p className={styles.news_card_date}>Публикация от 12.05.2022г.</p>
-						</div>
+						))}
 					</div>
 				</div>
 				<div className={styles.pagination}>
-					<Pagination defaultCurrent={1} total={1000} />
+					<Pagination defaultCurrent={1} total={300} />
 				</div>
-				{/* <div className="view ql-editor" dangerouslySetInnerHTML={{ __html: news[0].html }}></div> */}
 			</section>
 		</>
 	);

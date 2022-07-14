@@ -1,16 +1,16 @@
 import Image from 'next/image';
 import styles from './Clients.module.scss';
-import IMGAlpha from '../../images/alphaStrah.jpg';
-import IMGBeeline from '../../images/beeline.jpg';
-import IMGEatp from '../../images/eatpBank.png';
-import IMGEMegaphone from '../../images/megafon.svg';
-import IMGMts from '../../images/mts.png';
-import IMGPrombank from '../../images/promSvyazBank.png';
-import IMGRgd from '../../images/rgd.jpg';
-import IMGSber from '../../images/sberbank.png';
-import IMGSvyaznoy from '../../images/svyaznoy.png';
-import IMGTransneft from '../../images/transneft.jpg';
-import IMGAmesco from '../../images/amesco.jpg';
+import IMGAlpha from '../../public/images/alphaStrah.jpg';
+import IMGBeeline from '../../public/images/beeline.jpg';
+import IMGEatp from '../../public/images/eatpBank.png';
+import IMGEMegaphone from '../../public/images/megafon.svg';
+import IMGMts from '../../public/images/mts.png';
+import IMGPrombank from '../../public/images/promSvyazBank.png';
+import IMGRgd from '../../public/images/rgd.jpg';
+import IMGSber from '../../public/images/sberbank.png';
+import IMGSvyaznoy from '../../public/images/svyaznoy.png';
+import IMGTransneft from '../../public/images/transneft.jpg';
+import IMGAmesco from '../../public/images/amesco.jpg';
 
 const Clients = () => {
 	return (

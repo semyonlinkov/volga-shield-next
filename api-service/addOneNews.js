@@ -7,11 +7,13 @@ export const addOneNews = ({ html, title, titleImage }) => {
 
 	data.append('html', html);
 	data.append('title', title);
-	data.append('titleImg', titleImage);
+	// data.append('titleImg', titleImage);
+	data.append('id', '001');
 
-	fetch(`https://volga24bot.com/ok/volgashield/addNews.php`, {
+	fetch(`http://localhost:3000/news/`, {
 		method: "POST",
-		body: data
+		body: data,
+		contentType: 'application\json'
 	})
 		.then(res => res.json())
 		.then(res => {

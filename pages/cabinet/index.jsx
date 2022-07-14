@@ -16,6 +16,8 @@ const CabinetPage = () => {
 		addOneNews(form);
 	};
 
+	// return null;
+
 	return (
 		<Layout style={{ minHeight: '100vh' }}>
 			<Sider breakpoint="lg" collapsedWidth="0">

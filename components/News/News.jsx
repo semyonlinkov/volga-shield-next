@@ -1,15 +1,18 @@
 import Image from 'next/image';
 import styles from './News.module.scss';
-import IMGNews1 from '../../images/news1.jpg';
-import IMGNews2 from '../../images/news2.jpg';
-import IMGNews3 from '../../images/news3.png';
+import IMGNews1 from '../../public/images/news1.jpg';
+import IMGNews2 from '../../public/images/news2.jpg';
+import IMGNews3 from '../../public/images/news3.png';
+import { useRouter } from 'next/router';
 
 const News = () => {
+	const router = useRouter();
+
 	return (
 		<section className={styles.news_wrapper}>
 			<div className={styles.news_title}>
 				<h2>Последние новости</h2>
-				<button className="btn">
+				<button className="btn" onClick={() => router.push('/news')}>
 					<span>Все новости</span>
 				</button>
 			</div>

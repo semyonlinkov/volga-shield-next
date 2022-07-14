@@ -34,7 +34,7 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)), url(../../images/objectGuard.jpg);
+		background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)), url(../../public/images/objectGuard.jpg);
 		background-repeat: no-repeat;
 		background-size: auto 100%;
 		background-position: center;
@@ -43,7 +43,7 @@
 		&:hover {
 			outline: 3px solid white;
 			outline-offset: -15px;
-			background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(../../images/objectGuard.jpg);
+			background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(../../public/images/objectGuard.jpg);
 			background-size: auto 102%;
 		}
 	}
@@ -52,7 +52,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)), url(../../images/personalGuard.jpg);
+		background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)), url(../../public/images/personalGuard.jpg);
 		background-repeat: no-repeat;
 		background-size: auto 100%;
 		background-position: center;
@@ -61,7 +61,7 @@
 		&:hover {
 			outline: 3px solid white;
 			outline-offset: -15px;
-			background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(../../images/personalGuard.jpg);
+			background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(../../public/images/personalGuard.jpg);
 			background-size: auto 102%;
 		}
 	}
@@ -70,7 +70,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)), url(../../images/eventGuard.jpg);
+		background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)), url(../../public/images/eventGuard.jpg);
 		background-repeat: no-repeat;
 		background-size: auto 100%;
 		background-position: center;
@@ -79,7 +79,7 @@
 		&:hover {
 			outline: 3px solid white;
 			outline-offset: -15px;
-			background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(../../images/eventGuard.jpg);
+			background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(../../public/images/eventGuard.jpg);
 			background-size: auto 102%;
 		}
 	}
@@ -88,7 +88,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)), url(../../images/pco.jpg);
+		background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)), url(../../public/images/pco.jpg);
 		background-repeat: no-repeat;
 		background-size: auto 100%;
 		background-position: center;
@@ -97,7 +97,7 @@
 		&:hover {
 			outline: 3px solid white;
 			outline-offset: -15px;
-			background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(../../images/pco.jpg);
+			background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(../../public/images/pco.jpg);
 			background-size: auto 102%;
 		}
 	}
@@ -106,7 +106,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)), url(../../images/autoGuard.jpg);
+		background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)), url(../../public/images/autoGuard.jpg);
 		background-repeat: no-repeat;
 		background-size: auto 100%;
 		background-position: center;
@@ -115,7 +115,7 @@
 		&:hover {
 			outline: 3px solid white;
 			outline-offset: -15px;
-			background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(../../images/autoGuard.jpg);
+			background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(../../public/images/autoGuard.jpg);
 			background-size: auto 102%;
 		}
 	}
@@ -124,7 +124,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)), url(../../images/controlPanel.jpg);
+		background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.75)), url(../../public/images/controlPanel.jpg);
 		background-repeat: no-repeat;
 		background-size: auto 100%;
 		background-position: center;
@@ -133,7 +133,7 @@
 		&:hover {
 			outline: 3px solid white;
 			outline-offset: -15px;
-			background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(../../images/controlPanel.jpg);
+			background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url(../../public/images/controlPanel.jpg);
 			background-size: auto 102%;
 		}
 	}

@@ -2,11 +2,11 @@ import React from 'react';
 import Image from 'next/image';
 
 import styles from './Hero.module.scss';
-import BigWhiteLogo from '../../images/BigWhiteLogo.png';
-import IMGFb from '../../images/fb50.png';
-import IMGPhone from '../../images/phone25.png';
-import IMGWhatsup from '../../images/whatsapp50.png';
-import IMGVk from '../../images/vk50.png';
+import BigWhiteLogo from '../../public/images/BigWhiteLogo.png';
+import IMGFb from '../../public/images/fb50.png';
+import IMGPhone from '../../public/images/phone25.png';
+import IMGWhatsup from '../../public/images/whatsapp50.png';
+import IMGVk from '../../public/images/vk50.png';
 
 const Hero = () => {
 	return (

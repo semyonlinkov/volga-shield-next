@@ -1,7 +1,7 @@
 import { Button, Checkbox, Form, Input } from 'antd';
 import Image from 'next/image';
 import styles from './LoginPage.module.scss';
-import IMGLogo from '../../images/logoColor.png';
+import IMGLogo from '../../public/images/logoColor.png';
 
 const LoginPage = () => {
 	const onFinish = (values) => {
