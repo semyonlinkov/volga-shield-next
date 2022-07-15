@@ -1,11 +1,19 @@
-import React from 'react';
+import { useState } from 'react';
 import Header from '../../components/Header/Header';
 import styles from './PersonalDataAgreementPage.module.scss';
+import BurgerMenu from '../../components/BurgerMenu/BurgerMenu';
 
 const PersonalDataAgreementPage = () => {
+	const [isBurgerActive, setIsBurgerActive] = useState(false);
+
 	return (
 		<>
-			<Header style={{ backgroundColor: '#191919' }} />
+			<BurgerMenu isBurgerActive={isBurgerActive} setIsBurgerActive={setIsBurgerActive} />
+			<Header
+				isBurgerActive={isBurgerActive}
+				setIsBurgerActive={setIsBurgerActive}
+				style={{ backgroundColor: '#191919' }}
+			/>
 			<div className={styles.personal_data_wrapper}>
 				<h1>Согласие на обработку персональных данных</h1>
 				<p>

@@ -6,9 +6,8 @@ import IMGBurger from '../../public/images/burger60.png';
 import { useRouter } from 'next/dist/client/router';
 import Link from 'next/link';
 import Image from 'next/image';
-import { setIsBurgerActive } from '../../state/burgerState';
 
-const Header = ({ style = {} }) => {
+const Header = ({ style = {}, setIsBurgerActive }) => {
 	const router = useRouter();
 
 	return (
@@ -16,13 +15,7 @@ const Header = ({ style = {} }) => {
 			<span className={styles.logo} onClick={() => router.push('/')}>
 				ВОЛГА-ЩИТ
 			</span>
-			<div
-				className={styles.burger}
-				onClick={() => {
-					console.log('11');
-
-					setIsBurgerActive((prev) => !prev);
-				}}>
+			<div className={styles.burger} onClick={() => setIsBurgerActive((prev) => !prev)}>
 				<Image src={IMGBurger} alt="burger_menu" />
 			</div>
 
@@ -61,27 +54,27 @@ const Header = ({ style = {} }) => {
 						<Menu
 							items={[
 								{
-									label: <Link href="/docs">Охрана объектов</Link>,
+									label: <Link href="/object-guard">Охрана объектов</Link>,
 									key: '0',
 								},
 								{
-									label: <Link href="/exams">Личная охрана</Link>,
+									label: <Link href="/personal-guard">Личная охрана</Link>,
 									key: '1',
 								},
 								{
-									label: <Link href="/fire-safety">Охрана мероприятий</Link>,
+									label: <Link href="/event-guard">Охрана мероприятий</Link>,
 									key: '2',
 								},
 								{
-									label: <Link href="/fire-safety">Служба ПЦО</Link>,
+									label: <Link href="/pco">Служба ПЦО</Link>,
 									key: '3',
 								},
 								{
-									label: <Link href="/fire-safety">Мониторинг автотранспортных средств</Link>,
+									label: <Link href="/auto-guard">Мониторинг автотранспортных средств</Link>,
 									key: '4',
 								},
 								{
-									label: <Link href="/fire-safety">Контрольная панель</Link>,
+									label: <Link href="/control-panel">Контрольная панель</Link>,
 									key: '5',
 								},
 							]}
@@ -101,7 +94,7 @@ const Header = ({ style = {} }) => {
 						<Menu
 							items={[
 								{
-									label: <Link href="/exams">Рекомендации</Link>,
+									label: <Link href="/recommendations">Рекомендации</Link>,
 									key: '0',
 								},
 								{

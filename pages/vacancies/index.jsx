@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from '../../components/Header/Header';
 import styles from './VacanciesPage.module.scss';
+import BurgerMenu from '../../components/BurgerMenu/BurgerMenu';
 
 const VacanciesPage = () => {
+	const [isBurgerActive, setIsBurgerActive] = useState(false);
 	return (
 		<>
-			<Header style={{ backgroundColor: '#191919' }} />
+			<BurgerMenu isBurgerActive={isBurgerActive} setIsBurgerActive={setIsBurgerActive} />
+			<Header
+				isBurgerActive={isBurgerActive}
+				setIsBurgerActive={setIsBurgerActive}
+				style={{ backgroundColor: '#191919' }}
+			/>
 			<div className={styles.vacancies_wrapper}>
 				<h1>ВАКАНСИИ</h1>
 				<h3>Предприятие безопасности «Волга-Щит» приглашает на работу:</h3>

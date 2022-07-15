@@ -8,6 +8,8 @@ import { useRouter } from 'next/router';
 import path from 'path';
 import fs from 'fs';
 import matter from 'gray-matter';
+import BurgerMenu from '../../components/BurgerMenu/BurgerMenu';
+import { useState } from 'react';
 
 const { Search } = Input;
 
@@ -39,6 +41,8 @@ export async function getStaticProps() {
 }
 
 const NewsPage = ({ news }) => {
+	const [isBurgerActive, setIsBurgerActive] = useState(false);
+
 	const router = useRouter();
 
 	const onSearch = (value) => console.log(value);
@@ -47,7 +51,12 @@ const NewsPage = ({ news }) => {
 
 	return (
 		<>
-			<Header style={{ backgroundColor: '#191919' }} />
+			<BurgerMenu isBurgerActive={isBurgerActive} setIsBurgerActive={setIsBurgerActive} />
+			<Header
+				isBurgerActive={isBurgerActive}
+				setIsBurgerActive={setIsBurgerActive}
+				style={{ backgroundColor: '#191919' }}
+			/>
 			<section className={styles.news_page_wrapper}>
 				<div className={styles.news_action_panel}>
 					<h1>Новости</h1>

@@ -1,12 +1,9 @@
 import Link from 'next/link';
 import { useState } from 'react';
-import { $isBurgerActive, setIsBurgerActive } from '../../state/burgerState';
-import { useStore } from 'effector-react';
 
 import styles from './BurgerMenu.module.scss';
 
-const BurgerMenu = () => {
-	const isBurgerActive = useStore($isBurgerActive);
+const BurgerMenu = ({ isBurgerActive, setIsBurgerActive }) => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
