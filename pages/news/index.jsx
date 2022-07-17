@@ -1,6 +1,5 @@
-import { Input, Pagination } from 'antd';
+import { Pagination } from 'antd';
 import styles from './NewsPage.module.scss';
-// import IMGNews1 from '../../public/images/news1.jpg';
 import Image from 'next/image';
 import Header from '../../components/Header/Header';
 import { useRouter } from 'next/router';
@@ -10,8 +9,6 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import BurgerMenu from '../../components/BurgerMenu/BurgerMenu';
 import { useState } from 'react';
-
-const { Search } = Input;
 
 export async function getStaticProps() {
 	// Get files from the posts dir
@@ -35,19 +32,23 @@ export async function getStaticProps() {
 
 	return {
 		props: {
-			news,
+			news: news.reverse(),
 		},
 	};
 }
 
 const NewsPage = ({ news }) => {
-	const [isBurgerActive, setIsBurgerActive] = useState(false);
-
 	const router = useRouter();
 
-	const onSearch = (value) => console.log(value);
+	const [isBurgerActive, setIsBurgerActive] = useState(false);
+	const [newsOnPage, setNewsOnPage] = useState(news.slice(0, 6));
+	const [current, setCurrent] = useState(1);
 
-	console.log(news);
+	const onChange = (page) => {
+		// console.log(page);
+		setNewsOnPage(news.slice(page === 1 ? 0 : page * 6 - 6, page * 6));
+		setCurrent(page);
+	};
 
 	return (
 		<>
@@ -60,16 +61,22 @@ const NewsPage = ({ news }) => {
 			<section className={styles.news_page_wrapper}>
 				<div className={styles.news_action_panel}>
 					<h1>Новости</h1>
-					<Search placeholder="Поиск по новостям" allowClear onSearch={onSearch} style={{ width: '250px' }} />
 				</div>
 				<div className={styles.news_cards_wrapper}>
 					<div className={styles.news_cards_container}>
-						{news.map(({ slug, frontmatter }) => (
+						{newsOnPage.map(({ slug, frontmatter }) => (
 							<div className={styles.news_card} key={slug} onClick={() => router.push(`/news/${slug}`)}>
 								<div className={styles.news_card_img_wrapper}>
-									<div className={styles.news_card_img}>
-										<Image src={frontmatter.cover_image} layout="fill" objectFit="cover" alt="news-1" />
-									</div>
+									{frontmatter.cover_image && (
+										<div className={styles.news_card_img}>
+											<Image
+												src={frontmatter.cover_image}
+												layout="fill"
+												objectFit="cover"
+												alt="news-cover"
+											/>
+										</div>
+									)}
 								</div>
 								<h2 className={styles.news_card_title}>{frontmatter.title}</h2>
 								<p className={styles.news_card_text_content}>{frontmatter.excerpt}</p>
@@ -79,7 +86,12 @@ const NewsPage = ({ news }) => {
 					</div>
 				</div>
 				<div className={styles.pagination}>
-					<Pagination defaultCurrent={1} total={300} />
+					<Pagination
+						current={current}
+						onChange={onChange}
+						showSizeChanger={false}
+						total={Math.ceil((news.length * 10) / 6)}
+					/>
 				</div>
 			</section>
 		</>

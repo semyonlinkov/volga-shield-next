@@ -4,6 +4,10 @@ import matter from 'gray-matter';
 import Link from 'next/link';
 import Image from 'next/image';
 import marked from 'marked';
+import BurgerMenu from '../../components/BurgerMenu/BurgerMenu';
+import Header from '../../components/Header/Header';
+import { useState } from 'react';
+import styles from './NewsPageId.module.scss';
 
 export async function getStaticPaths() {
 	const files = fs.readdirSync(path.join('news'));
@@ -35,18 +39,31 @@ export async function getStaticProps({ params: { slug } }) {
 }
 
 export default function PostPage({ frontmatter: { title, date, cover_image }, slug, content }) {
+	const [isBurgerActive, setIsBurgerActive] = useState(false);
+
+	// console.log(content);
+
 	return (
 		<>
+			<BurgerMenu isBurgerActive={isBurgerActive} setIsBurgerActive={setIsBurgerActive} />
+			<Header
+				isBurgerActive={isBurgerActive}
+				setIsBurgerActive={setIsBurgerActive}
+				style={{ backgroundColor: '#191919' }}
+			/>
 			<Link href="/">
 				<a className="btn btn-back">Go Back</a>
 			</Link>
-			<div className="card card-page">
-				<h1 className="post-title">{title}</h1>
-				<div className="post-date">Posted on {date}</div>
-				<Image width={'600px'} height={'300px'} src={cover_image} alt="" />
-				<div className="post-body">
-					<div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
-				</div>
+			<div className={styles.wrapper}>
+				<h1>{title}</h1>
+				{cover_image && (
+					<div className={styles.img_wrapper}>
+						<Image layout="fill" src={cover_image} alt="title-img" />
+					</div>
+				)}
+				<div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
+				<br />
+				<div>Опубликованно {date}</div>
 			</div>
 		</>
 	);

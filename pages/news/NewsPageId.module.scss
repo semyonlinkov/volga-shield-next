@@ -1,0 +1,27 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	padding: 40px;
+	font-size: 0.9rem;
+
+	.img_wrapper {
+		align-self: center;
+		position: relative;
+		width: 300px;
+		height: 150px;
+	}
+
+	h1 {
+		text-align: center;
+		padding: 15px 0;
+	}
+
+	h3 {
+		padding: 10px 20px 10px;
+	}
+
+	ul {
+		list-style: circle;
+	}
+}
