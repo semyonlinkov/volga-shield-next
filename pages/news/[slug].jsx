@@ -41,8 +41,6 @@ export async function getStaticProps({ params: { slug } }) {
 export default function PostPage({ frontmatter: { title, date, cover_image }, slug, content }) {
 	const [isBurgerActive, setIsBurgerActive] = useState(false);
 
-	// console.log(content);
-
 	return (
 		<>
 			<BurgerMenu isBurgerActive={isBurgerActive} setIsBurgerActive={setIsBurgerActive} />
@@ -58,12 +56,15 @@ export default function PostPage({ frontmatter: { title, date, cover_image }, sl
 				<h1>{title}</h1>
 				{cover_image && (
 					<div className={styles.img_wrapper}>
-						<Image layout="fill" src={cover_image} alt="title-img" />
+						<Image layout="fill" objectFit="scale-down" src={cover_image} alt="title-img" />
 					</div>
 				)}
+				<br />
 				<div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
 				<br />
-				<div>Опубликованно {date}</div>
+				<div>
+					<p style={{ fontWeight: 500 }}>Опубликованно {date}</p>
+				</div>
 			</div>
 		</>
 	);

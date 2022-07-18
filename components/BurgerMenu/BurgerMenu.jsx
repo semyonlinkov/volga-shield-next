@@ -4,7 +4,8 @@ import { useState } from 'react';
 import styles from './BurgerMenu.module.scss';
 
 const BurgerMenu = ({ isBurgerActive, setIsBurgerActive }) => {
-	const [isOpen, setIsOpen] = useState(false);
+	const [isAboutCompanyOpen, setIsAboutCompanyOpen] = useState(false);
+	const [isServicesOpen, setIsServicesOpen] = useState(false);
 
 	return (
 		<section
@@ -18,46 +19,61 @@ const BurgerMenu = ({ isBurgerActive, setIsBurgerActive }) => {
 					<li>
 						<Link href={'/'}>Главная</Link>
 					</li>
-					<li>
-						<Link href={'/about-us'}>О Нас</Link>
-					</li>
 					<li
 						onClick={(e) => {
 							e.stopPropagation();
-							setIsOpen((prev) => !prev);
+							setIsAboutCompanyOpen((prev) => !prev);
 						}}>
-						<p style={{ color: 'white' }}>Обучение {isOpen ? '⮝' : '⮟'}</p>
+						<p style={{ color: 'white' }}>О Компании {isAboutCompanyOpen ? '▲' : '▼'}</p>
 					</li>
-					{isOpen && (
+					{isAboutCompanyOpen && (
 						<>
-							<li style={{ fontSize: '0.8rem', paddingLeft: '30px' }}>
-								<Link href={'/docs'} onClick={() => setIsOpen(false)}>
-									Документы для поступления
-								</Link>
+							<li
+								style={{ fontSize: '0.8rem', paddingLeft: '30px' }}
+								onClick={() => setIsAboutCompanyOpen(false)}>
+								<Link href={'/about-us'}>О нас</Link>
 							</li>
-							<li style={{ fontSize: '0.8rem', paddingLeft: '30px' }}>
-								<Link href={'/exams'} onClick={() => setIsOpen(false)}>
-									Порядок сдачи экзамена
-								</Link>
+							<li
+								style={{ fontSize: '0.8rem', paddingLeft: '30px' }}
+								onClick={() => setIsAboutCompanyOpen(false)}>
+								<Link href={'/vacancies'}>Вакансии</Link>
 							</li>
-							<li style={{ fontSize: '0.8rem', paddingLeft: '30px' }}>
-								<Link href={'/fire-safety'} onClick={() => setIsOpen(false)}>
-									Пожарно-технический минимум
-								</Link>
-							</li>
-							<li style={{ fontSize: '0.8rem', paddingLeft: '30px' }}>
-								<Link href={'/crew-training'} onClick={() => setIsOpen(false)}>
-									Обучение плавсоства
-								</Link>
+							<li
+								style={{ fontSize: '0.8rem', paddingLeft: '30px' }}
+								onClick={() => setIsAboutCompanyOpen(false)}>
+								<Link href={'/clients-and-partners'}>Клиенты и партнеры</Link>
 							</li>
 						</>
 					)}
-					<li>
-						<Link href={'/prices'}>Цены</Link>
+					<li
+						onClick={(e) => {
+							e.stopPropagation();
+							setIsServicesOpen((prev) => !prev);
+						}}>
+						<p style={{ color: 'white' }}>Услуги {isServicesOpen ? '▲' : '▼'}</p>
 					</li>
-					<li>
-						<Link href={'/contacts'}>Контакты</Link>
-					</li>
+					{isServicesOpen && (
+						<>
+							<li style={{ fontSize: '0.8rem', paddingLeft: '30px' }} onClick={() => setIsServicesOpen(false)}>
+								<Link href={'/object-guard'}>Охрана объектов</Link>
+							</li>
+							<li style={{ fontSize: '0.8rem', paddingLeft: '30px' }} onClick={() => setIsServicesOpen(false)}>
+								<Link href={'/personal-guard'}>Личная храна</Link>
+							</li>
+							<li style={{ fontSize: '0.8rem', paddingLeft: '30px' }} onClick={() => setIsServicesOpen(false)}>
+								<Link href={'/event-guard'}>Охрана мероприятий</Link>
+							</li>
+							<li style={{ fontSize: '0.8rem', paddingLeft: '30px' }} onClick={() => setIsServicesOpen(false)}>
+								<Link href={'/pco'}>Служба ПЦО</Link>
+							</li>
+							<li style={{ fontSize: '0.8rem', paddingLeft: '30px' }} onClick={() => setIsServicesOpen(false)}>
+								<Link href={'/auto-guard'}>Мониторинг автотранспортных средств</Link>
+							</li>
+							<li style={{ fontSize: '0.8rem', paddingLeft: '30px' }} onClick={() => setIsServicesOpen(false)}>
+								<Link href={'/control-panel'}>Контрольная панель</Link>
+							</li>
+						</>
+					)}
 				</ul>
 			</div>
 		</section>

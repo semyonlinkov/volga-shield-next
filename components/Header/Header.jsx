@@ -18,7 +18,6 @@ const Header = ({ style = {}, setIsBurgerActive }) => {
 			<div className={styles.burger} onClick={() => setIsBurgerActive((prev) => !prev)}>
 				<Image src={IMGBurger} alt="burger_menu" />
 			</div>
-
 			<ul className={styles.links}>
 				<Dropdown
 					placement="bottom"
@@ -98,12 +97,14 @@ const Header = ({ style = {}, setIsBurgerActive }) => {
 									key: '0',
 								},
 								{
-									label: <Link href="/fire-safety">Документы для договора</Link>,
+									label: <Link href="/documents-for-contract">Документы для договора</Link>,
 									key: '1',
 								},
 								{
 									label: (
-										<Link href="/fire-safety">Автоматическая проверка состояния охраняемого объекта</Link>
+										<Link href="/auto-check-object">
+											Автоматическая проверка состояния охраняемого объекта
+										</Link>
 									),
 									key: '2',
 								},
@@ -128,7 +129,7 @@ const Header = ({ style = {}, setIsBurgerActive }) => {
 									key: '0',
 								},
 								{
-									label: <Link href="/exams">Галерея</Link>,
+									label: <Link href="/gallery">Галерея</Link>,
 									key: '1',
 								},
 							]}
@@ -142,30 +143,11 @@ const Header = ({ style = {}, setIsBurgerActive }) => {
 						</div>
 					</li>
 				</Dropdown>
-				<Dropdown
-					placement="bottom"
-					overlay={
-						<Menu
-							items={[
-								{
-									label: <Link href="/docs">Главный офис</Link>,
-									key: '0',
-								},
-								{
-									label: <Link href="/exams">Филиалы</Link>,
-									key: '1',
-								},
-							]}
-						/>
-					}
-					trigger={['click', 'hover']}>
-					<li className={styles.link}>
-						<p>КОНТАКТЫ</p>
-						<div className={styles.chevron}>
-							<Image src={IMGChevron} width={16} height={16} alt="chevron" />
-						</div>
-					</li>
-				</Dropdown>
+				<li className={styles.link}>
+					<Link href="/contacts">
+						<p style={{ fontSize: '20px' }}>КОНТАКТЫ</p>
+					</Link>
+				</li>
 			</ul>
 		</header>
 	);

@@ -3,6 +3,8 @@
 	padding-top: 95px;
 	font-size: 0.9rem;
 	min-height: 90vh;
+	max-width: 1600px;
+	margin: 0 auto;
 
 	h1 {
 		text-align: center;
@@ -11,5 +13,16 @@
 
 	h3 {
 		padding: 10px 20px 10px;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	.wrapper {
+		padding: 20px;
+		padding-top: 65px;
+		font-size: 0.9rem;
+		min-height: 90vh;
+		max-width: 1600px;
+		margin: 0 auto;
 	}
 }

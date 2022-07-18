@@ -17,7 +17,7 @@ const News = () => {
 				</button>
 			</div>
 			<div className={styles.news_cards_wrapper}>
-				<div className={styles.news_card}>
+				<div className={styles.news_card} onClick={() => router.push('/news/080')}>
 					<div className={styles.news_card_img_wrapper}>
 						<div className={styles.news_card_img}>
 							<Image layout="fill" src={IMGNews1} objectFit="cover" alt="news-1" />
@@ -30,7 +30,7 @@ const News = () => {
 					</p>
 					<p className={styles.news_card_date}>Публикация от 12.05.2022г.</p>
 				</div>
-				<div className={styles.news_card}>
+				<div className={styles.news_card} onClick={() => router.push('/news/079')}>
 					<div className={styles.news_card_img_wrapper}>
 						<div className={styles.news_card_img}>
 							<Image layout="fill" src={IMGNews2} objectFit="cover" alt="news-1" />
@@ -46,7 +46,7 @@ const News = () => {
 					</p>
 					<p className={styles.news_card_date}>Публикация от 12.05.2022г.</p>
 				</div>
-				<div className={styles.news_card}>
+				<div className={styles.news_card} onClick={() => router.push('/news/078')}>
 					<div className={styles.news_card_img_wrapper}>
 						<div className={styles.news_card_img}>
 							<Image layout="fill" src={IMGNews3} objectFit="cover" alt="news-1" />
