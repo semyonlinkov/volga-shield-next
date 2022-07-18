@@ -1,9 +1,18 @@
-.aboutUs_wrapper {
+.wrapper {
 	padding: 40px;
 	padding-top: 115px;
 	font-size: 0.9rem;
 	max-width: 1600px;
 	margin: 0 auto;
+
+	.gallery_wrapper {
+		display: grid;
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: 1fr;
+		grid-column-gap: 0px;
+		grid-row-gap: 0px;
+	}
+
 	ul {
 		li {
 			list-style: circle;
@@ -21,7 +30,7 @@
 }
 
 @media screen and (max-width: 992px) {
-	.aboutUs_wrapper {
+	.wrapper {
 		padding: 20px;
 		padding-top: 85px;
 		font-size: 0.9rem;
