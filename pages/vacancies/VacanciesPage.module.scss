@@ -4,10 +4,20 @@
 	font-size: 0.9rem;
 	max-width: 1600px;
 	margin: 0 auto;
+	height: 90vh;
+
+	h1 {
+		text-align: center;
+		padding: 20px 0;
+	}
+
+	h3 {
+		padding: 10px 20px 10px;
+	}
 }
 
 @media screen and (max-width: 992px) {
-	.wrapper {
+	.vacancies_wrapper {
 		padding: 20px;
 		padding-top: 65px;
 		font-size: 0.9rem;

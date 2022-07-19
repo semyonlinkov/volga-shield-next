@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import styles from './Clients.module.scss';
-import IMGAlpha from '../../public/images/alphaStrah.jpg';
 import IMGBeeline from '../../public/images/beeline.png';
 import IMGEatp from '../../public/images/eatpBank.png';
 import IMGEMegaphone from '../../public/images/megafon.svg';
@@ -17,9 +16,6 @@ const Clients = () => {
 		<div className={styles.clients_wrapper}>
 			<h2 className={styles.title}>Наши клиенты</h2>
 			<div className={styles.carousel_wrapper}>
-				<div className={styles.img_wrapper}>
-					<Image alt="test" layout="fixed" objectFit="contain" height={'250px'} width={500} src={IMGAlpha} />
-				</div>
 				<div className={styles.img_wrapper}>
 					<Image alt="test" layout="fixed" objectFit="contain" height={'250px'} width={500} src={IMGBeeline} />
 				</div>
@@ -49,9 +45,6 @@ const Clients = () => {
 				</div>
 				<div className={styles.img_wrapper}>
 					<Image alt="test" layout="fixed" objectFit="contain" height={'250px'} width={500} src={IMGAmesco} />
-				</div>
-				<div className={styles.img_wrapper}>
-					<Image alt="test" layout="fixed" objectFit="contain" height={'250px'} width={500} src={IMGAlpha} />
 				</div>
 				<div className={styles.img_wrapper}>
 					<Image alt="test" layout="fixed" objectFit="contain" height={'250px'} width={500} src={IMGBeeline} />

@@ -6,6 +6,8 @@ import styles from './BurgerMenu.module.scss';
 const BurgerMenu = ({ isBurgerActive, setIsBurgerActive }) => {
 	const [isAboutCompanyOpen, setIsAboutCompanyOpen] = useState(false);
 	const [isServicesOpen, setIsServicesOpen] = useState(false);
+	const [isClientsOpen, setIsClientsOpen] = useState(false);
+	const [isMediaOpen, setIsMediaOpen] = useState(false);
 
 	return (
 		<section
@@ -23,8 +25,11 @@ const BurgerMenu = ({ isBurgerActive, setIsBurgerActive }) => {
 						onClick={(e) => {
 							e.stopPropagation();
 							setIsAboutCompanyOpen((prev) => !prev);
+							setIsServicesOpen(false);
+							setIsClientsOpen(false);
+							setIsMediaOpen(false);
 						}}>
-						<p style={{ color: 'white' }}>О Компании {isAboutCompanyOpen ? '▲' : '▼'}</p>
+						<p style={{ color: 'white' }}>О Компании {isAboutCompanyOpen ? '▴' : '▾'}</p>
 					</li>
 					{isAboutCompanyOpen && (
 						<>
@@ -49,8 +54,11 @@ const BurgerMenu = ({ isBurgerActive, setIsBurgerActive }) => {
 						onClick={(e) => {
 							e.stopPropagation();
 							setIsServicesOpen((prev) => !prev);
+							setIsAboutCompanyOpen(false);
+							setIsClientsOpen(false);
+							setIsMediaOpen(false);
 						}}>
-						<p style={{ color: 'white' }}>Услуги {isServicesOpen ? '▲' : '▼'}</p>
+						<p style={{ color: 'white' }}>Услуги {isServicesOpen ? '▴' : '▾'}</p>
 					</li>
 					{isServicesOpen && (
 						<>
@@ -74,6 +82,52 @@ const BurgerMenu = ({ isBurgerActive, setIsBurgerActive }) => {
 							</li>
 						</>
 					)}
+					<li
+						onClick={(e) => {
+							e.stopPropagation();
+							setIsClientsOpen((prev) => !prev);
+							setIsServicesOpen(false);
+							setIsAboutCompanyOpen(false);
+							setIsMediaOpen(false);
+						}}>
+						<p style={{ color: 'white' }}>Клиентам {isClientsOpen ? '▴' : '▾'}</p>
+					</li>
+					{isClientsOpen && (
+						<>
+							<li style={{ fontSize: '0.8rem', paddingLeft: '30px' }} onClick={() => setIsClientsOpen(false)}>
+								<Link href={'/recommendations'}>Рекомендации</Link>
+							</li>
+							<li style={{ fontSize: '0.8rem', paddingLeft: '30px' }} onClick={() => setIsClientsOpen(false)}>
+								<Link href={'/documents-for-contract'}>Документы для договора</Link>
+							</li>
+							<li style={{ fontSize: '0.8rem', paddingLeft: '30px' }} onClick={() => setIsClientsOpen(false)}>
+								<Link href={'/auto-check-object'}>Автоматическая проверка состояния охраняемого объекта</Link>
+							</li>
+						</>
+					)}
+					<li
+						onClick={(e) => {
+							e.stopPropagation();
+							setIsMediaOpen((prev) => !prev);
+							setIsClientsOpen(false);
+							setIsServicesOpen(false);
+							setIsAboutCompanyOpen(false);
+						}}>
+						<p style={{ color: 'white' }}>Медиа {isMediaOpen ? '▴' : '▾'}</p>
+					</li>
+					{isMediaOpen && (
+						<>
+							<li style={{ fontSize: '0.8rem', paddingLeft: '30px' }} onClick={() => setIsMediaOpen(false)}>
+								<Link href={'/news'}>Новости</Link>
+							</li>
+							<li style={{ fontSize: '0.8rem', paddingLeft: '30px' }} onClick={() => setIsMediaOpen(false)}>
+								<Link href={'/gallery'}>Галлерея</Link>
+							</li>
+						</>
+					)}
+					<li>
+						<Link href={'/contacts'}>Контакты</Link>
+					</li>
 				</ul>
 			</div>
 		</section>

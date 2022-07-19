@@ -1,9 +1,10 @@
 .aboutUs_wrapper {
 	padding: 40px;
-	padding-top: 115px;
+	padding-top: 95px;
 	font-size: 0.9rem;
 	max-width: 1600px;
 	margin: 0 auto;
+
 	ul {
 		li {
 			list-style: circle;
@@ -16,7 +17,13 @@
 	}
 
 	h1 {
-		margin-bottom: 10px;
+		text-align: center;
+		padding: 15px 0;
+		font-size: 30px;
+	}
+
+	h3 {
+		padding: 10px 20px 10px;
 	}
 }
 
