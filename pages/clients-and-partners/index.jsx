@@ -5,12 +5,16 @@ import BurgerMenu from '../../components/BurgerMenu/BurgerMenu';
 import IMGClients from '../../public/images/clients.jpg';
 import Image from 'next/image';
 import Clients from '../../components/Clients/Clients';
+import Head from 'next/head';
 
 const ClientsAndPartners = () => {
 	const [isBurgerActive, setIsBurgerActive] = useState(false);
 
 	return (
 		<>
+			<Head>
+				<title>Наши клиенты</title>
+			</Head>
 			<BurgerMenu isBurgerActive={isBurgerActive} setIsBurgerActive={setIsBurgerActive} />
 			<Header
 				isBurgerActive={isBurgerActive}

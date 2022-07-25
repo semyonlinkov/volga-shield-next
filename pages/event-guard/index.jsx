@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { useState } from 'react';
 import BurgerMenu from '../../components/BurgerMenu/BurgerMenu';
 import Header from '../../components/Header/Header';
@@ -8,6 +9,9 @@ const EventGuardPage = () => {
 
 	return (
 		<>
+			<Head>
+				<title>Охрана мероприятий</title>
+			</Head>
 			<BurgerMenu isBurgerActive={isBurgerActive} setIsBurgerActive={setIsBurgerActive} />
 			<Header
 				isBurgerActive={isBurgerActive}

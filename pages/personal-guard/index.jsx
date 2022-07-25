@@ -2,12 +2,16 @@ import React, { useState } from 'react';
 import Header from '../../components/Header/Header';
 import styles from './PersonalGuardPage.module.scss';
 import BurgerMenu from '../../components/BurgerMenu/BurgerMenu';
+import Head from 'next/head';
 
 const PersonalGuardPage = () => {
 	const [isBurgerActive, setIsBurgerActive] = useState(false);
 
 	return (
 		<>
+			<Head>
+				<title>Личная охрана</title>
+			</Head>
 			<BurgerMenu isBurgerActive={isBurgerActive} setIsBurgerActive={setIsBurgerActive} />
 			<Header
 				isBurgerActive={isBurgerActive}

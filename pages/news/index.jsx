@@ -9,6 +9,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import BurgerMenu from '../../components/BurgerMenu/BurgerMenu';
 import { useState } from 'react';
+import Head from 'next/head';
 
 export async function getStaticProps() {
 	// Get files from the posts dir
@@ -52,6 +53,9 @@ const NewsPage = ({ news }) => {
 
 	return (
 		<>
+			<Head>
+				<title>Новости</title>
+			</Head>
 			<BurgerMenu isBurgerActive={isBurgerActive} setIsBurgerActive={setIsBurgerActive} />
 			<Header
 				isBurgerActive={isBurgerActive}

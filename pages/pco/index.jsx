@@ -2,12 +2,16 @@ import { useState } from 'react';
 import Header from '../../components/Header/Header';
 import styles from './PcoPage.module.scss';
 import BurgerMenu from '../../components/BurgerMenu/BurgerMenu';
+import Head from 'next/head';
 
 const PcoPage = () => {
 	const [isBurgerActive, setIsBurgerActive] = useState(false);
 
 	return (
 		<>
+			<Head>
+				<title>Служба ПЦО</title>
+			</Head>
 			<BurgerMenu isBurgerActive={isBurgerActive} setIsBurgerActive={setIsBurgerActive} />
 			<Header
 				isBurgerActive={isBurgerActive}

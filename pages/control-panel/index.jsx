@@ -4,12 +4,16 @@ import BurgerMenu from '../../components/BurgerMenu/BurgerMenu';
 import Header from '../../components/Header/Header';
 import styles from './ControlPanelPage.module.scss';
 import IMGControlPanel from '../../public/images/controlPanel1.jpg';
+import Head from 'next/head';
 
 const ControlPanelPage = () => {
 	const [isBurgerActive, setIsBurgerActive] = useState(false);
 
 	return (
 		<>
+			<Head>
+				<title>Контрольная панель</title>
+			</Head>
 			<BurgerMenu isBurgerActive={isBurgerActive} setIsBurgerActive={setIsBurgerActive} />
 			<Header
 				isBurgerActive={isBurgerActive}
