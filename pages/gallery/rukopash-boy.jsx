@@ -23,7 +23,13 @@ const AboutUsPage = () => {
 			/>
 			<section
 				className={styles.wrapper}
-				style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '10px' }}>
+				style={{
+					display: 'flex',
+					justifyContent: 'center',
+					alignContent: 'flex-start',
+					flexWrap: 'wrap',
+					gap: '10px',
+				}}>
 				<h3>
 					Компания «Волга - Щит» выступила одним из спонсоров первенства Астраханской области по рукопашному бою.
 				</h3>

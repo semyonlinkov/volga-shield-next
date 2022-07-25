@@ -34,7 +34,13 @@ const AboutUsPage = () => {
 			/>
 			<section
 				className={styles.wrapper}
-				style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '10px' }}>
+				style={{
+					display: 'flex',
+					justifyContent: 'center',
+					alignContent: 'flex-start',
+					flexWrap: 'wrap',
+					gap: '10px',
+				}}>
 				<p>
 					В Астраханском Кремле состоялось торжественное мероприятие, посвященное празднованию 25-летия частной
 					охраны и сыска в России. Собрание прошло под патронажем Координационного совета Негосударственной Сферы

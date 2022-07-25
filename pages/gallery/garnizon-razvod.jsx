@@ -25,7 +25,13 @@ const AboutUsPage = () => {
 			/>
 			<section
 				className={styles.wrapper}
-				style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '10px' }}>
+				style={{
+					display: 'flex',
+					justifyContent: 'center',
+					alignContent: 'flex-start',
+					flexWrap: 'wrap',
+					gap: '10px',
+				}}>
 				<ImageAntd.PreviewGroup>
 					<ImageAntd width={200} height={150} src={IMG01.src} />
 					<ImageAntd width={200} height={150} src={IMG02.src} />

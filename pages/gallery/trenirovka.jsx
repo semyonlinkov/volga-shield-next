@@ -28,7 +28,13 @@ const AboutUsPage = () => {
 			/>
 			<section
 				className={styles.wrapper}
-				style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '10px' }}>
+				style={{
+					display: 'flex',
+					justifyContent: 'center',
+					alignContent: 'flex-start',
+					flexWrap: 'wrap',
+					gap: '10px',
+				}}>
 				<p style={{ textAlign: 'center' }}>
 					Совместная тренировка с персоналом филиала ЗАО &quot;Газпромнефть-Аэро&quot; и сотрудниками охранного
 					предприятия ООО ОП «Волга-Щит» по теме: «Действия персонала филиала и сотрудников охранного предприятия
