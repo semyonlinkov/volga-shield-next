@@ -37,11 +37,11 @@
 		.form_item3 {
 			width: 100%;
 
-			& input::-webkit-input-placeholder {
-				background: -webkit-linear-gradient(left, #aaa 0% 50px, red 0px 100%);
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-			}
+			// & input::-webkit-input-placeholder {
+			// 	background: -webkit-linear-gradient(left, #aaa 0% 50px, red 0px 100%);
+			// 	-webkit-background-clip: text;
+			// 	-webkit-text-fill-color: transparent;
+			// }
 		}
 	}
 

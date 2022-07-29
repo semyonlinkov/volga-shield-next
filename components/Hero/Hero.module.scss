@@ -57,11 +57,11 @@
 			align-items: center;
 			p {
 				padding-left: 10px;
-				span {
+				a {
 					cursor: pointer;
 				}
 
-				span:hover {
+				a:hover {
 					filter: invert(0.2);
 				}
 			}

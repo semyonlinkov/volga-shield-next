@@ -8,7 +8,7 @@ const Footer = () => {
 		<footer className={styles.footer_wrapper}>
 			<div className={styles.content}>
 				<div>
-					<p>© АО «Волга-Щит»</p>
+					<p>© ООО «Волга-Щит»</p>
 					<p>ул. Боевая, д. 38. (центральный офис)</p>
 					<p>г. Астрахань, Россия, 414024</p>
 				</div>
